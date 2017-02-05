@@ -50,8 +50,17 @@ def add_user():
             flash('User successfully added')
             return redirect(url_for('show_users'))
 
+    flash_errors(user_form)
     return render_template('add_user.html', form=user_form)
 
+# Flash errors from the form if validation fails
+def flash_errors(form):
+    for field, errors in form.errors.items():
+        for error in errors:
+            flash(u"Error in the %s field - %s" % (
+                getattr(form, field).label.text,
+                error
+            ))
 
 ###
 # The functions below should be applicable to all Flask apps.

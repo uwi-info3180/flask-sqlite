@@ -5,7 +5,7 @@
   <h1 class="page-header">Add User</h1>
   {% with messages = get_flashed_messages() %}
     {% if messages %}
-      <div class="alert alert-error">
+      <div class="alert alert-danger">
         <ul>
         {% for message in messages %}
           <li>{{ message }}</li>
