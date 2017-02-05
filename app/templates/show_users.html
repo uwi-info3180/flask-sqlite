@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<div class="container">
+  <h1 class="page-header">Show Users</h1>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <div class="alert alert-success">
+        <ul>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  {% endwith %}
+
+  <ul>
+    {% for user in users %}
+    <li>{{ user.name }}</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

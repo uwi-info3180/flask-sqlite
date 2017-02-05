@@ -1,0 +1,15 @@
+appdirs==1.4.0
+click==6.7
+Flask==0.12
+Flask-SQLAlchemy==2.1
+Flask-WTF==0.14.2
+gunicorn==19.6.0
+itsdangerous==0.24
+Jinja2==2.9.4
+MarkupSafe==0.23
+packaging==16.8
+pyparsing==2.1.10
+six==1.10.0
+SQLAlchemy==1.1.5
+Werkzeug==0.11.15
+WTForms==2.1
