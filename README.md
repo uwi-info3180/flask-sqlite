@@ -12,10 +12,14 @@ $ source venv/bin/activate
 $ pip install -r requirements.txt
 ```
 
-Then create the sqlite3 database file and create the tables.
+Then create the sqlite3 database file and create the tables based on our `app/models.py`.
 
 ```
-$ sqlite3 /tmp/mydatabase.db < schema.sql
+$ touch /tmp/mydatabase.db
+$ python
+>>> from app import db
+>>> db.create_all()
+>>> quit()
 ```
 
 Then start the development server
