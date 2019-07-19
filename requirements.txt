@@ -1,6 +1,6 @@
 appdirs==1.4.0
 click==6.7
-Flask==0.12
+Flask==1.0
 Flask-SQLAlchemy==2.1
 Flask-WTF==0.14.2
 gunicorn==19.6.0
