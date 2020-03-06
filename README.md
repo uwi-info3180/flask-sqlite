@@ -12,23 +12,24 @@ $ source venv/bin/activate
 $ pip install -r requirements.txt
 ```
 
-Then create the sqlite3 database file and create the tables based on our `app/models.py`.
-
-```
-$ touch /tmp/mydatabase.db
-$ python
->>> from app import db
->>> db.create_all()
->>> quit()
-```
-
-Then start the development server
+Start the development server
 
 ```
 $ python run.py
 ```
 
+
 Browse to http://0.0.0.0:8080
 
 You can then add new users by browsing to http://0.0.0.0:8080/add-user and view
 a list of users by browsing to http://0.0.0.0:8080/users
+
+To reset the users table, run the following SQL query:
+```
+DROP TABLE IF EXISTS users;
+CREATE TABLE users (
+  id integer primary key autoincrement,
+  name string not null,
+  email string not null
+);
+```

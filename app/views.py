@@ -7,8 +7,8 @@ This file creates your application.
 
 from app import app, db
 from flask import render_template, request, redirect, url_for, flash
-from forms import UserForm
-from models import User
+from app.forms import UserForm
+from app.models import User
 # import sqlite3
 
 ###
